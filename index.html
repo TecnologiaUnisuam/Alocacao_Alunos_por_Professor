@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang='pt-br'>
+
+<head>
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+
+  <link rel='icon' href='Img/Icons/iconGuia.png' type='image/x-icon'>
+  <link href='https://fonts.googleapis.com/icon?family=Material+Icons' rel='stylesheet'>
+
+  <link rel='stylesheet' href='style.css'>
+  <link rel='stylesheet' href='cores.css'>
+
+  <title>UNISUAM - TE | Alocação Alunos por Professor</title>
+</head>
+
+<body>
+  <section class='conteudoTopo'>
+    <h1 id='nomeTopo' class='nomeTopo txtBranco'>Alocação Alunos por Professor</h1>
+  </section>
+  <section id='validacoes' class='validacoes'>
+    <div class='validadores'>
+      <p class='validador'><span class='nome'><b>Matrícula:</b></span><input type='text' class='matricula'
+          id='matricula' value='97734411720'></p>
+      <p class='validador'><input type='button' class='buscar' id='buscar' value='BUSCAR DISCIPLINA(S)'
+          onclick='buscar()'></p>
+    </div>
+  </section>
+  <section id='disciplinas' class='disciplinas displayNone'>
+    <div class='divTabela bgBranco'>
+      <div class="divFiltrar bgBrancoClaro1">
+        <p><span class="spanFiltrar">CÓDIGO MOODLE: </span><input type="text" id="filtro" placeholder="Digite o Código Moodle"></p>
+      </div>
+      <table class='tabela' id='tabela'>
+        <thead>
+        <tr>
+          <th colspan='7' class='bgLaranjaClaroSuam'>DISCIPLINAS EAD</th>
+        </tr>
+        <tr class='bgBrancoClaro1'>
+          <th>MATRÍCULA</th>
+          <th>NOME DO ALUNO</th>
+          <th>E-MAIL</th>
+          <th>PERÍODO</th>
+          <th>CURSO</th>
+          <th>MODALIDADE</th>
+          <th>CÓDIGO MOODLE</th>
+        </tr>
+      </thead>
+      <tbody>
+
+
+
+
+        <tr class='U97734411720 displayNone' id='U97734411720' name='matriculas'>
+          <td class='descricao' id='descricao1'>89292106</td>
+          <td class='descricao' id='descricao2'>Roseli Nunes Pereira da Silva</td>
+          <td class='descricao' id='descricao3'>rnunessilva@souunisuam.com.br</td>
+          <td class='descricao' id='descricao4'>4º Período</td>
+          <td class='descricao' id='descricao5'>Superior de Tecnologia em Gestão Comercial (EAD)</td>
+          <td class='descricao' id='descricao6'>Presencial</td>
+          <td class='descricao' id='descricao7'>2023-2|GLIC1038|EAD|01</td>
+        </tr>
+        <tr class='U97734411720 displayNone' id='U97734411720' name='matriculas'>
+          <td class='descricao' id='descricao1'>19202908</td>
+          <td class='descricao' id='descricao2'>Tailly Santos Pereira</td>
+          <td class='descricao' id='descricao3'>tpereira@souunisuam.com.br</td>
+          <td class='descricao' id='descricao4'>2º Período</td>
+          <td class='descricao' id='descricao5'>Superior de Tecnologia em Processos Gerenciais (EAD)</td>
+          <td class='descricao' id='descricao6'>EAD</td>
+          <td class='descricao' id='descricao7'>2023-2|GDEF0015|EAD|01</td>
+        </tr>
+        
+
+        
+        </tbody>
+        </table>
+    </div>
+  </section>
+  <div class='divVoltar  displayNone' id='divVoltar'>
+    <div class='campoVoltar' onclick='voltar()'>
+      <p class='iconeVoltar'><span class='material-icons' id='nomeIconeVoltar'>arrow_back_ios</span></p>
+      <p class='nomeVoltar'>VOLTAR</p>
+    </div>
+  </div>
+
+
+  <script src='//code.jquery.com/jquery-3.2.1.min.js'></script>
+  <script src='script.js'></script>
+</body>
+
+</html>
