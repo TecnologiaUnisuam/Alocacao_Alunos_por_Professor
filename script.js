@@ -321,7 +321,7 @@ function filtrarTabela() {
 
     for (var i = 1; i < linhas.length; i++) { // Comece a partir do índice 1 para evitar a linha de cabeçalho
         celulas = linhas[i].getElementsByTagName("td");
-        for (var j = 6; j < celulas.length; j++) {
+        for (var j = 1; j < celulas.length; j++) {
             textoCelula = celulas[j].textContent || celulas[j].innerText;
             if (textoCelula.toUpperCase().indexOf(filtro) > -1) {
                 linhas[i].style.display = "";
@@ -333,6 +333,18 @@ function filtrarTabela() {
     }
 }
 
+function posFiltroTabela(){
+    var tbody = document.getElementById("tbody");
+
+    if(document.getElementById("filtro").value == ""){
+        tbody.classList.add('displayNone');
+    }
+    else{
+        tbody.classList.remove('displayNone');
+    }
+}
+
 // Adicione um ouvinte de evento ao campo de filtro para chamar a função de filtro
 document.getElementById("filtro").addEventListener("keyup", filtrarTabela);
+document.getElementById("filtro").addEventListener("keyup", posFiltroTabela);
 
